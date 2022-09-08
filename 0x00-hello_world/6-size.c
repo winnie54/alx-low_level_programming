@@ -17,12 +17,12 @@ int main(void)
 	double doubleType;
 
 /**sizeof evaluates the size of a variable*/
-	printf("int size: %lu bytes\n", sizeof(intType));
-	printf("char size: %lu bytes\n", sizeof(charType));
-	printf("short size: %lu bytes\n", sizeof(shortType));
-	printf("long size: %lu bytes\n", sizeof(longType));
-	printf("float size: %lu bytes\n", sizeof(floatType));
-	printf("double size: %lu  bytes\n", sizeof(doubleType));
+	printf("int size: %zu bytes\n", sizeof(intType));
+	printf("char size: %zu bytes\n", sizeof(charType));
+	printf("short size: %zu bytes\n", sizeof(shortType));
+	printf("long size: %zu bytes\n", sizeof(longType));
+	printf("float size: %zu bytes\n", sizeof(floatType));
+	printf("double size: %zu  bytes\n", sizeof(doubleType));
 
 	return (0);
 }
