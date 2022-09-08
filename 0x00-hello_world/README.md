@@ -1,1 +1,1 @@
-Script that runs a C file through a preprocessor and saves it in another file
+Compiles a c file but does not link
