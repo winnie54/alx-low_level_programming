@@ -3,10 +3,9 @@
 /**
  * main - puts the string in the put function
  *
- *Description: using the main  function
+ *Description: print a string using followed by a new line
  *this program puts "Programming is like building a multilingual puzzle"
- * Always Return: 0 if exited properly,non-zero otherwise
- * string initialisation
+ * Return: 0
  */
 int main(void)
 {
