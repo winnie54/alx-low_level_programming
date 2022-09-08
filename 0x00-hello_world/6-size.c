@@ -1,23 +1,24 @@
 #include <stdio.h>
 
 /**
- * main	- Entry point
+ * main	- sizeof
  * 
  * Always Return: 0 (Success)
+ * using the main function
  */
 int main(void)
-	int intType;
-	char charType;
-	float floatType;
-	double doubleType;
+	intType;
+	charType;
+	floatType;
+	doubleType;
 	/**
 	 * sizeof evaluates the size of a variable
 	 */
 {
-	printf("int size: %zu bytes\n", sizeof(int));
-	printf("char size: %zu bytes\n", sizeof(char));
-	printf("float size: %zu bytes\n", sizeof(float));
-	printf("double size: %zu  bytes\n", sizeof(double));
+	printf("int size: %lu bytes\n", sizeof(intType));
+	printf("char size: %lu bytes\n", sizeof(charType));
+	printf("float size: %lu bytes\n", sizeof(floatType));
+	printf("double size: %lu  bytes\n", sizeof(doubleType));
 
 	return (0);
 }
