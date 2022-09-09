@@ -3,11 +3,8 @@
 /**
  * main	- puts string in the printf function
  *
- * Description:	using the main function
- * this	program	printsf	with proper grammar, but the outcome is	a piece	of art,
- * Always Return: 0 (Success)
- * if program runs successfully
- * string initialisation
+ * Description:	print a string using followed by a new line
+ * Return: 0
  */
 int main(void)
 {
