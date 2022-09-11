@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main	- prints all the possible combinations of 3 digits,
-   and without the type char variable
+ * main	- prints all possible combinations of 3 digits, without char variable
  *
  * Return: Always 0
  */
