@@ -1,8 +1,11 @@
+#include<stdio.h>
 #include "main.h"
 #include <string.h>
 
 /**
- * main	- prints _putchar, using the putchar prototype
+ * main	- Entry point
+ *
+ * Description: prints _putchar using putchar prototype
  *
  * Return: Always 0 Success
  */
