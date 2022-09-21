@@ -1,5 +1,5 @@
 #include <stdio.h>
-include "main.h"
+#include "main.h"
 
 /**
  * print_triangle - prints a triangle, followed by a new line
@@ -8,20 +8,23 @@ include "main.h"
  */
 void print_triangle(int size)
 {
-	int hght, base;
+	int sp, ro, tr;
 
 	if (size <= 0)
+	{
 		_putchar('\n');
+	}
 	else
 	{
-		for (hght = 1; hght <= size; ++hght)
+		for (ro = 0; ro <= (size - 1); ro++)
 		{
-			for (base = 1; base <= size; ++base)
+			for (sp = 0; sp < (size - 1) - ro; sp++)
 			{
-				if ((hght + base) <= size)
-					_putchar('\n');
-				else
-					_putchar('#');
+				_putchar(' ');
+			}
+			for (tr = 0; tr <= ro; tr++)
+			{	
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
