@@ -4,14 +4,13 @@
  * main	- program that prints either number
  * for fizz or buzz or fizzbuzz
  *
- *
  * Return: return 0
  */
 int main(void)
 {
-	int num = 1;
+	int num;
 
-	while (num++ < 100)
+	for (num = 1; num <= 100 ++num)
 	{
 		if ((num % 3 == 0) && (num % 5 == 0))
 		{
@@ -27,8 +26,12 @@ int main(void)
 		}
 		else
 		{
-			printf("num");
-			
+			printf("%d", num);
 		}
+		if (num != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
+	return (0);
 }

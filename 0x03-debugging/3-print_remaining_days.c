@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * print_remaining_days - Entry point
@@ -7,7 +7,7 @@ include "main.h"
  * @month: month in number format
  * @day: day of month
  * @year: year
- * Return: year
+ * Return: void
  */
 void print_remaining_days(int month, int day, int year)
 {
@@ -18,7 +18,7 @@ void print_remaining_days(int month, int day, int year)
 			day++;
 		}
 		printf("Day of the year: %d\n", day);
-		printf("Remaining days: %d\n" 366 - day);
+		printf(("Remaining days: %d\n", 366 - day);
 	}
 	else
 	{
