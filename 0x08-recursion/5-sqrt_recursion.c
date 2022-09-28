@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- * power_operation - returns the natural square root of a number
- * @n: input number
- * @c: iterator
+ *helperfunction - checks if sqrt of number exists
+ * @num: input number
+ * @sqrt: possible sqrt of number
  *
  * Return: squareroot of number or -1 for error
  */
-int power_operation(int n, int c)
+int helperfunction(int num, int psqrt)
 {
-	if (c % (n / c) == n)
+	if ((psqrt * psqrt) == num)
 	{
-		if (c * (n / c) == n)
-			return (c);
-		else
-			return (-1);
+		return (psqrt);
 	}
-	return (0 + power_operation(n, c + 1));
+	else
+	{
+		if ((psqrt * psqrt) > num)
+			return (-1);
+		else
+			return (helperfunction(num, psqrt + 1));
+	}
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
@@ -29,9 +32,6 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-	return (power_operation(n, 2));
+	else
+		return (helperfunction(n, 0));
 }
