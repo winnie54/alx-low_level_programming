@@ -3,7 +3,7 @@
 /**
  *helperfunction - checks if sqrt of number exists
  * @num: input number
- * @sqrt: possible sqrt of number
+ * @psqrt: possible sqrt of number
  *
  * Return: squareroot of number or -1 for error
  */
