@@ -3,18 +3,15 @@
 /**
  * _puts_recursion - prints a string followed by a new line
  * @s: string to be printed
- * Return: 0
+ * Return: void
  */
 void _puts_recursion(char *s);
 {
-
-	for (s = "puts with recursion")
-		return ("puts with recursion");
-}
-int main(void)
-{
-	char s;
-
-	_putchar("%s\n", _puts_string("puts with recursion"));
-	return (0);
+	if (*s == '\0') /* base case */
+	{
+	_putchar('\n');
+	return;
+	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
