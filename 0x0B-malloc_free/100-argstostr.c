@@ -1,7 +1,23 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string
+ *
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+		len++, s++;
+
+	return (len);
+}
 /**
  * *argstostr - convert arguments on command line to strings
  * @ac: int type
@@ -11,40 +27,39 @@
 
 char *argstostr(int ac, char **av)
 {
-	int size, count, count1, count2 = 0;
-	char *ptr;
+	char *s;
+	int len = 0, i, j, k = 0;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || av == NULL) /* validate input */
 	{
 		return (NULL);
 	}
 
-	for (count = 0; count < ac; count++)
+	/* find length to malloc */
+		for (i = 0; i < ac; i++)
 	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		for (i = 0; i < ac; i++)
 		{
-			size += 1;
+			len += _strlen(av[i]);
 		}
-		size += 1;
+		len += (ac + 1); /* add space for newlines and null terminator */
 	}
-	size += 1;
-
-	ptr = malloc(sizeof(char) * size);
-	if (ptr == NULL)
+	/* allocate memory and free if error */
+		s = malloc(len * sizeof(char));
+	if (s == NULL)
 	{
-		free(ptr);
+		free(s);
 		return (NULL);
 	}
-	for (count = 0; count < ac; count++)
+	/* insert each arg into *str */
+		for (i = 0; i < ac; i++)
 	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		for (j = 0; j < _strlen(av[i]); j++)
 		{
-			ptr[count2] = av[count][count1];
-			count2++;
+			s[k++] = av[i][j];
 		}
-		ptr[count2] = '\n';
-		count2++;
+		s[k++] = '\n';
 	}
-	ptr[count2] = '\0';
-	return (ptr);
+
+	return (s);
 }
