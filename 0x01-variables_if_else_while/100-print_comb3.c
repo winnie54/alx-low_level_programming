@@ -1,35 +1,32 @@
 #include <stdio.h>
 
 /**
- * main	- prints all possible different combinations of 2 digits
+ * main - prints all possible different combinations of two digits
  *
- * Return: Always 0
+ * Description: using the main function
+ * this program print "01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, ...
+ * Return: 0
  */
 int main(void)
 {
-	int c = 0;
-	int d;
-	int e;
+	int i, j;
 
-	while (c <= 99)
-
+	for (i = 0 ; i <= 9 ; i++)
 	{
-		d = (c / 10 + '0');
-		e = (c % +'0');
-		if (d < e)
-
+		for (j = 1 ; j <= 9 ; j++)
 		{
-			putchar(d);
-			putchar(e);
-			if (c != 89)
-
+			if (j > i)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i != 8)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-		c++;
 	}
-		putchar('\n');
-		return (0);
+	putchar('\n');
+	return (0);
 }
