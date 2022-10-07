@@ -1,24 +1,27 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * numLenght - returns the lenght of string
- * @num: operand number
- * Return: number of digits
+ * main - print fibonacci
+ *
+ * Return: always 0
  */
-int numLenght(int num)
+int main(void)
 {
-	int lenght = 0;
+	unsigned int a, b, c, d, s;
 
-	if (!num)
+	a = 1;
+	b = 2;
+	c = 3;
+	s = 2;
+
+	for (d = 2; d <= 32; d++)
 	{
-		return (1);
+		if (c % 2 == 0)
+			s = s + c;
+		a = b;
+		b = c;
+		c = a + b;
 	}
-
-	while (num)
-	{
-		num = num / 10;
-		lenght += 1;
-	}
-
-	return (lenght);
+	printf("%u\n", s);
+	return (0);
 }
